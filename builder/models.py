@@ -19,6 +19,7 @@ class Pages(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user_pages')
     html = models.TextField()
     css = models.TextField()
+    javascript = models.TextField()
     def __str__(self):
         return str(self.name)
 
@@ -33,5 +34,6 @@ class Templetes(models.Model):
     description = models.CharField(max_length=100)
     html = models.TextField()
     css = models.TextField()
+    javascript = models.TextField()
     def __str__(self):
         return str(self.name)
